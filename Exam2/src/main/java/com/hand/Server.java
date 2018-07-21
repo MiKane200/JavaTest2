@@ -50,15 +50,15 @@ public class Server extends ServerSocket {
         public void run() {
             try {
                 dis = new DataInputStream(socket.getInputStream());
- 
+
                 // 文件名和长度
                 String fileName = dis.readUTF();
                 long fileLength = dis.readLong();
-                File directory = new File("Exam2/tmp");
+                File directory = new File("/tmp");
                 if(!directory.exists()) {
                     directory.mkdir();
                 }
-                File file = new File(directory.getAbsolutePath() + File.separatorChar + fileName);
+                File file = new File(directory.getAbsolutePath() + "/" + fileName);
                 fos = new FileOutputStream(file);
  
                 // 开始接收文件

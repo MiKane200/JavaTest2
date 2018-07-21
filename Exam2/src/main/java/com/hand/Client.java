@@ -25,7 +25,11 @@ public class Client extends Socket {
 
     public void sendFile() throws Exception {
         try {
-            File file = new File("Exam1/tmp/SampleChapter1.pdf");
+            File directory = new File("/tmp");
+            if(!directory.exists()) {
+                directory.mkdir();
+            }
+            File file = new File(directory.getAbsolutePath()+"/SampleChapter1.pdf");
             if(file.exists()) {
                 fis = new FileInputStream(file);
                 dos = new DataOutputStream(client.getOutputStream());

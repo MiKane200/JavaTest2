@@ -22,11 +22,11 @@ public class App
         new Thread(() -> {
             HttpGet get = new HttpGet("http://192.168.11.205:18080/trainning/SampleChapter1.pdf");
             try {
-                File directory = new File("Exam1/tmp");
+                File directory = new File("/tmp");
                 if(!directory.exists()) {
                     directory.mkdir();
                 }
-                FileOutputStream fos = new FileOutputStream("Exam1/tmp/SampleChapter1.pdf");
+                FileOutputStream fos = new FileOutputStream(directory.getAbsolutePath()+"/SampleChapter1.pdf");
                 BufferedOutputStream bos = new BufferedOutputStream(fos,1000);
 
                 HttpResponse response = client.execute(get);

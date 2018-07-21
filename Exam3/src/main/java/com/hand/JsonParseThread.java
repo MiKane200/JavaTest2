@@ -7,14 +7,14 @@ import com.google.gson.Gson;
 public class JsonParseThread extends Thread{
     @Override
     public void run() {
-        File directory = new File("Exam3/tmp");
+        File directory = new File("/tmp");
         if(!directory.exists()) {
             directory.mkdir();
         }
         try {
             String result = null;
             if((result = GetInfo.getResult())!=null){
-                FileOutputStream fis = new FileOutputStream("Exam3/tmp/股票编码.json");
+                FileOutputStream fis = new FileOutputStream(directory.getAbsolutePath()+"/股票编码.json");
                 OutputStreamWriter osw = new OutputStreamWriter(fis);
                 BufferedWriter bw = new BufferedWriter(osw);
 
