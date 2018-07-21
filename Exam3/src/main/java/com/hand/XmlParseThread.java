@@ -23,7 +23,7 @@ import org.dom4j.io.XMLWriter;
 public class XmlParseThread extends Thread{
     @Override
     public void run() {
-        File directory = new File("Exam3/tmp");
+        File directory = new File("tmp/");
         if(!directory.exists()) {
             directory.mkdir();
         }
@@ -87,7 +87,7 @@ public class XmlParseThread extends Thread{
             e.printStackTrace();
         }
         try {
-            transform.transform(new DOMSource(document),new StreamResult(new File("Exam3/tmp/股票编码.xml")));
+            transform.transform(new DOMSource(document),new StreamResult(new File("tmp/股票编码.xml")));
         } catch (TransformerException e) {
             //e.printStackTrace();
         }
