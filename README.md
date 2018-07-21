@@ -7,7 +7,11 @@ There are some steps for you to run those programs:
 
 * tips:因为我没搞定如何把依赖的jar包一起打包，所以我打好包之后不能引入依赖，这个问题昨天晚上一直都搞不定，今天没来得及问老师就开考了，哎~~~，下来一定要搞定啊啊啊，这个，老师可以扣我可怜的分数:(。
 
-* !!!这儿下来之后，我找到了引入依赖方法，传上去免得老师麻烦，这部分分老师扣掉吧。
+##### !!!这儿下来之后，我找到了引入依赖方法，传上去免得老师麻烦，这部分分老师扣掉吧。
+* 更新之后的步骤
+1. 进入JavaTest2。
+2. 运行`sh build.sh`。
+
 
 Sunshine!
 <p align="right">java-basic-test By zongwei Li</p>
