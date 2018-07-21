@@ -22,7 +22,7 @@ public class App
         new Thread(() -> {
             HttpGet get = new HttpGet("http://192.168.11.205:18080/trainning/SampleChapter1.pdf");
             try {
-                File directory = new File("/tmp");
+                File directory = new File("tmp/");
                 if(!directory.exists()) {
                     directory.mkdir();
                 }

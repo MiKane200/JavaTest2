@@ -7,7 +7,7 @@ import com.google.gson.Gson;
 public class JsonParseThread extends Thread{
     @Override
     public void run() {
-        File directory = new File("/tmp");
+        File directory = new File("tmp/");
         if(!directory.exists()) {
             directory.mkdir();
         }
