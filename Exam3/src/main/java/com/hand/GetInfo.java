@@ -32,7 +32,7 @@ public class GetInfo {
         //HttpEntity entity = response.getEntity();
 
         try {
-            URL url = new URL("http://hq.sinajs.cn/list=sh601006");
+            URL url = new URL("http://hq.sinajs.cn/list=sh"+code);
             URLConnection connection = url.openConnection();
             InputStream is = connection.getInputStream();
 
