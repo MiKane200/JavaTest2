@@ -25,7 +25,7 @@ public class Client extends Socket {
 
     public void sendFile() throws Exception {
         try {
-            File directory = new File("tmp/");
+            File directory = new File("../Exam1/tmp/");
             if(!directory.exists()) {
                 directory.mkdir();
             }
